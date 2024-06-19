@@ -1,4 +1,5 @@
-"# tp-pesquisa-operacional" 
+
+# tp-pesquisa-operacional" 
 
 ## Como executar o projeto Django
 
