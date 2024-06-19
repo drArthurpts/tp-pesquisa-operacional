@@ -1,5 +1,14 @@
 
-# tp-pesquisa-operacional" 
+# Trabalho Prático da Disciplina de Pesquisa Operacional 
+Neste trabalho iremos usar um problema do mundo real como exemplo e aplicar a
+modelagem matemática, a fim de chegar em uma solução mais adequada dentre as diversas
+alternativas, ou seja, obter a solução mais otimizada.
+
+O objetivo principal deste projeto de pesquisa operacional é desenvolver
+um modelo de otimização que maximize a alocação de desabrigados em abrigos disponíveis em
+toda a cidade de Porto Alegre. Queremos garantir que o maior número possível de desabrigados
+seja acomodado de maneira eficiente e eficaz, levando em consideração as capacidades dos
+abrigos e a localização dos desabrigados.
 
 ## Como executar o projeto Django
 
