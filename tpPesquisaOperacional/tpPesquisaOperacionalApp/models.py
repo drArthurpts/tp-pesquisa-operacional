@@ -10,8 +10,5 @@ class Abrigo(models.Model):
 
 class Desabrigado(models.Model):
     nome = models.CharField(max_length=200, null=False, blank=False)
-    localizacao_atual = models.CharField(max_length=200, null=False, blank=False)
-    abrigo = models.ForeignKey(Abrigo, on_delete=models.SET_NULL, null=True, blank=True)
-
     def __str__(self):
         return self.nome
