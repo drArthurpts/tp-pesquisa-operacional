@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from .models import Abrigo
+from .forms import Desabrigado
 
-# Create your views here.
 def lista_abrigos(request):
-    return render(request, 'tpPesquisaOperacionalApp/lista_abrigos.html')
+    form = Desabrigado()
+    abrigos = Abrigo.objects.all()
+    return render(request, 'lista_abrigos.html', {'form': form, 'abrigos': abrigos})
