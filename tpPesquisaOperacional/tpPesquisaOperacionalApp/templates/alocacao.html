@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alocação de Desabrigados</title>
+</head>
+<body>
+    <h1>Alocação de Desabrigados</h1>
+    <ul>
+        {% for desabrigado, abrigo in alocacao.items %}
+            <li>{{ desabrigado }} -> {{ abrigo }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
