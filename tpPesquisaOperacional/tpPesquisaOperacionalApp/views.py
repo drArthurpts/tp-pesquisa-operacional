@@ -1,8 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Abrigo
-from .forms import Desabrigado
+from .forms import DesabrigadoForm
 
 def lista_abrigos(request):
-    form = Desabrigado()
-    abrigos = Abrigo.objects.all()
-    return render(request, 'lista_abrigos.html', {'form': form, 'abrigos': abrigos})
+    if request.method == "GET":
+        form = DesabrigadoForm()
+        abrigos = Abrigo.objects.all()
+        return render(request, 'lista_abrigos.html', {'form': form, 'abrigos': abrigos})
+    elif request.method == "POST":
+        form = DesabrigadoForm(request.POST)
+        if form.is_valid():
+            desabrigado = form.save()
+            return redirect('lista_abrigos')
+        else:
+            abrigos = Abrigo.objects.all()
+            return render(request, 'lista_abrigos.html', {'form': form, 'abrigos': abrigos})
+    else:
+        return render(request, 'lista_abrigos.html', {'form': DesabrigadoForm(), 'abrigos': Abrigo.objects.all()})
+

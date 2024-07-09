@@ -1,8 +1,8 @@
+# forms.py
 from django import forms
+from .models import Desabrigado
 
-class Desabrigado(forms.Form):
-    nome = forms.CharField(label=' Nome ', max_length=100)
-    idade = forms.IntegerField(label=' Idade')
-    sexo = forms.ChoiceField(label=' Sexo', choices=[('M', 'Masculino'), ('F', 'Feminino'), ('O', 'Outro')])
-    foto = forms.ImageField(label=' Foto')
-    
+class DesabrigadoForm(forms.ModelForm):
+    class Meta:
+        model = Desabrigado
+        fields = '__all__'  # Certifique-se de que todos os campos obrigatórios estão incluídos
